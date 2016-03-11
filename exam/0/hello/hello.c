@@ -6,16 +6,14 @@
 /*   By: jubarbie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/08 10:00:53 by jubarbie          #+#    #+#             */
-/*   Updated: 2016/03/08 10:03:09 by jubarbie         ###   ########.fr       */
+/*   Updated: 2016/03/11 19:09:34 by jubarbie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	main(int ac, char **av)
+int	main(void)
 {
-	if (av[1])
-		ac++;
 	write (1, "Hello World!\n", 13);
 	return (0);
 }
