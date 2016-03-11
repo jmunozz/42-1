@@ -6,14 +6,14 @@
 /*   By: jubarbie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/08 14:46:30 by jubarbie          #+#    #+#             */
-/*   Updated: 2016/03/08 15:21:24 by jubarbie         ###   ########.fr       */
+/*   Updated: 2016/03/11 19:43:43 by jubarbie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-int ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
 	int i;
 
@@ -23,7 +23,7 @@ int ft_strlen(char *str)
 	return (i);
 }
 
-int	ft_atoi(char *nb)
+int		ft_atoi(char *nb)
 {
 	int	ret;
 	int len;
