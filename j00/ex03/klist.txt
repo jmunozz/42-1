@@ -1,0 +1,5 @@
+Credentials cache: API:16033
+        Principal: jubarbie@42.FR
+
+  Issued                Expires               Principal
+Oct 13 15:55:24 2015  Oct 14 01:55:24 2015  krbtgt/42.FR@42.FR
