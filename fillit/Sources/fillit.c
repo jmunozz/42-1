@@ -6,7 +6,7 @@
 /*   By: jubarbie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/24 11:56:35 by jubarbie          #+#    #+#             */
-/*   Updated: 2016/03/11 15:42:41 by jubarbie         ###   ########.fr       */
+/*   Updated: 2016/03/11 20:16:43 by jubarbie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static void	enlarge_map(t_meta *meta, int size)
 	while (++i < size)
 	{
 		MAP[i] = 4294967295;
-		MAP[i] -= ft_power(2, SIZE) - 1;
+		MAP[i] -= ft_power_two(SIZE) - 1;
 	}
 	MAP[i] = 4294967295;
 }
