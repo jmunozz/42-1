@@ -6,7 +6,7 @@
 /*   By: jubarbie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 09:31:33 by jubarbie          #+#    #+#             */
-/*   Updated: 2016/02/26 23:02:57 by jubarbie         ###   ########.fr       */
+/*   Updated: 2016/03/11 18:26:52 by jubarbie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,6 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 unsigned int	ft_sqrt_up(unsigned int n);
 char			*ft_convert_base(char *nbr, char *base_from, char *base_to);
 char			*ft_strrev(char *str);
+int				ft_power_two(unsigned int power);
 
 #endif
