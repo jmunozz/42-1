@@ -6,7 +6,7 @@
 /*   By: jubarbie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/26 10:50:03 by jubarbie          #+#    #+#             */
-/*   Updated: 2016/03/11 15:40:50 by jubarbie         ###   ########.fr       */
+/*   Updated: 2016/03/11 20:14:49 by jubarbie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void		move_tetri_left(t_meta *meta, int i)
 	while (++j < 4)
 	{
 		TETRI[i][j] <<= 1;
-		if (TETRI[i][j] >= (unsigned int)ft_power(2, SIZE))
+		if (TETRI[i][j] >= (unsigned int)ft_power_two(SIZE))
 			out = 1;
 	}
 	if (out)
