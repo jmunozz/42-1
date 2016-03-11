@@ -6,7 +6,7 @@
 /*   By: jubarbie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/11 18:16:53 by jubarbie          #+#    #+#             */
-/*   Updated: 2016/03/11 18:27:06 by jubarbie         ###   ########.fr       */
+/*   Updated: 2016/03/11 20:12:48 by jubarbie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 int	ft_power_two(unsigned int power)
 {
-	int ret;
-
-	ret = 0;
-	ret |= (1 << power);
-	return (ret);
+	return (1 << power);
 }
