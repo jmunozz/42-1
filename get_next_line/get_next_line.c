@@ -1,26 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jubarbie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/03/14 11:19:47 by jubarbie          #+#    #+#             */
+/*   Updated: 2016/03/14 17:54:36 by jubarbie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
 int	get_next_line(int fd, char **line)
 {
-	char	buf[BUFF_SIZE + 1];
-	int	ret;
-	int	len;
-	int	i;
+	static char	buf[BUFF_LIM + 1];
+	static int	i = -1;
+	int			ret;
 
 	if (!(*line = (char *)malloc(sizeof(char) * 1)))
 		return (-1);
-	len = 0;
 	**line = '\0';
-	while ((ret = read(fd, buf, BUFF_SIZE)))
+	if (i != -1)
 	{
-		buf[ret] = '\0';
+		i++;
+		while (i < BUFF_LIM && buf[i] == '\n')
+			i++;
+		*line = ft_strjoin(*line, &buf[i]);
+	}
+	while ((ret = read(fd, buf, BUFF_LIM)))
+	{
 		i = 0;
+		buf[ret] = '\0';
 		while (i < ret && buf[i] && buf[i] != '\n')
 			i++;
-		len += i;
-		ft_strlcat(*line, buf, len + 1);
-		if (!buf[len % ret] || buf[len % ret] == '\n' || ret != BUFF_SIZE)
-			return (len);
+		buf[i] = '\0';
+		*line = ft_strjoin(*line, buf);
+		if (i != ret || buf[i] == '\n' || ret != BUFF_LIM)
+			return (1);
 	}
-	return (len);
+	return (0);
 }
